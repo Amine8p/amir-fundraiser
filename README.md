@@ -1,4 +1,3 @@
-# amir-fundraiser
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -211,7 +210,8 @@
             .donation-options {
                 flex-direction: column;
                 align-items: center;
-            
+            }
+        }
     </style>
 </head>
 <body>
@@ -223,9 +223,7 @@
     </header>
     
     <div class="container">
-        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="أمير كشيدي" class="main-image">
-        الله يحفضكم
-      <img src="https://i.imgur.com/AEFOnKy.jpg" alt="أمير كشيدي" class="main-image">
+        <img src="https://i.imgur.com/AEFOnKy.jpg" alt="أمير كشيدي" class="main-image">
       
         <div class="story-section">
             <h2>قصة أمير</h2>
@@ -238,22 +236,24 @@
         
         <div class="donation-section">
             <h2>كن جزءًا من تغيير حياة أمير</h2>
-            <p>هدفنا جمع 50 مليون دنار جزائري 🪡</p>
+            <p>هدفنا جمع 50 مليون دينار جزائري</p>
             
             <div class="progress-container">
                 <div class="progress-bar" style="width: 35%;"></div>
             </div>
             
             <div class="progress-text">
-                <span>
+                <span>17,500,000 دينار</span>
+                <span>35% من الهدف</span>
+                <span>50,000,000 دينار</span>
             </div>
             
             <h3>اختر مبلغ التبرع:</h3>
             <div class="donation-options">
                 <div class="donation-amount">100 ألف</div>
                 <div class="donation-amount">200 ألف</div>
-                <div class="donation-amount selected">500 الف</div>
-                <div class="donation-amount">مليون</div>
+                <div class="donation-amount selected">500 ألف</div>
+                <div class="donation-amount">1 مليون</div>
             </div>
             
             <div class="custom-amount">
@@ -281,18 +281,18 @@
         <div class="container">
             <h3>للتواصل والمساهمة:</h3>
             <div class="contact-info">
-                <p>الهاتف: <a href="tel:+966501234567">0772656837</a></p>
+                <p>الهاتف: <a href="tel:+213772656837">0772656837</a></p>
                 <p>البريد الإلكتروني: <a href="mailto:helpamir@example.com">helpamir@example.com</a></p>
-                <p>حساب البنك: الراجحي | IBAN: SA0380000000001234567890</p>
-            </div>فطيس المراطو
+                <p>حساب البنك: البنك الجزائري | رقم الحساب: 1234567890</p>
+            </div>
             
-            <a href="https://www.facebook.com/profile.php?id=100037011190718" target="_blank">زوروا صفحتي على فيسبوك</a>
+            <a href="https://www.facebook.com/profile.php?id=100037011190718" target="_blank" style="color: white; display: block; margin-top: 1rem;">زوروا صفحتي على فيسبوك</a>
             <p style="margin-top: 2rem;">© 2023 حملة مساعدة أمير. كل الحقوق محفوظة.</p>
         </div>
     </footer>
     
     <script>
-        // JavaScript بسيط لإدارة التبرعات
+        // JavaScript لإدارة التبرعات
         document.querySelectorAll('.donation-amount').forEach(button => {
             button.addEventListener('click', function() {
                 document.querySelectorAll('.donation-amount').forEach(btn => {
@@ -300,6 +300,13 @@
                 });
                 this.classList.add('selected');
             });
+        });
+
+        // إضافة تفاعل زر التبرع
+        document.querySelector('.btn-donate').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('شكرًا لك على تبرعك! سيتم توجيهك إلى صفحة الدفع.');
+            // هنا يمكنك إضافة رابط الدفع الفعلي
         });
     </script>
 </body>
